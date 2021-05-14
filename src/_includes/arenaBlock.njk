@@ -1,0 +1,18 @@
+{% macro arenaBlock(arenaBlock) %}
+  <div class="arena-block">
+    <img 
+    src="{{ arenaBlock.image.original.url }}"
+    loading="lazy"
+    
+    {# Are.na alt text is pretty bad (it uses the title of the block), if you control the blocks you are using you should try and make the titles suitable for alt text as well #}
+
+    alt="{{ arenaBlock.title }}"
+    >
+    <p>{{ arenaBlock.title }}</p>
+  </div>
+{% endmacro %}
+
+
+{# 
+  This is a macro, it's a component that we can import into other templates and pass it variables (see base.njk).
+#}
